@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Esfihas.css">
+
+    <title>Contador de esfihas</title>
+</head>
+
+<body>
+    <h3>Selecione as esfihas</h3>
+
+    <div class="pai">
+        <div class="botoes">
+            <button onclick="add_carne()">Carne</button>
+            <button onclick="add_4queijos()">4 Queijos</button>
+            <button onclick="add_frango()">Frango com catupiry</button>
+            <button onclick="add_chocolate()">Chocolate</button>
+            <button onclick="add_kitkat()">KitKat</button>
+            <span><button onclick="remover_tudo()">Remover tudo</button></span>
+        </div><p>
+            
+        <div class="divs">
+            <div style="display: none;" id="div_carne">Carne: 0</div>
+            <div style="display: none;" id="div_queijo">4 Queijos: 0</div>
+            <div style="display: none;" id="div_frango">Frango com catupiry: 0</div>
+            <div style="display: none;" id="div_chocolate">Chocolate: 0</div>
+            <div style="display: none;" id="div_kitkat">KitKat: 0</div>
+        </div>
+    </div>
+
+    <script>
+        var carne = 0
+        var queijo = 0
+        var frango = 0
+        var chocolate = 0
+        var kitkat = 0
+
+        function add_carne() {
+            carne++
+            div_carne.innerHTML = `Carne: ${carne}`
+            div_carne.style.display = 'block'
+        }
+
+        function add_4queijos() {
+            queijo++
+            div_queijo.innerHTML = `4 Queijos: ${queijo}`
+            div_queijo.style.display = 'block'
+        }
+
+        function add_frango() {
+            frango++
+            div_frango.innerHTML = `Frango com catupiry: ${frango}`
+            div_frango.style.display = 'block'
+        }
+
+        function add_chocolate() {
+            chocolate++
+            div_chocolate.innerHTML = `Chocolate: ${chocolate}`
+            div_chocolate.style.display = 'block'
+        }
+
+        function add_kitkat() {
+            kitkat++
+            div_kitkat.innerHTML = `KitKat: ${kitkat}`
+            div_kitkat.style.display = 'block'
+        }
+
+        function remover_tudo() {
+            carne = 0
+            frango = 0
+            queijo = 0
+            chocolate = 0
+            kitkat = 0
+
+            div_carne.style.display = 'none'
+            div_queijo.style.display = 'none'
+            div_frango.style.display = 'none'
+            div_chocolate.style.display = 'none'
+            div_kitkat.style.display = 'none'
+
+        }
+    </script>
+</body>
+
+</html>

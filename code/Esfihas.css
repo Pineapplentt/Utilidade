@@ -1,0 +1,12 @@
+body {
+    background-color: beige;
+    font-family: monospace;
+}
+
+.botoes button {
+    color: green;
+}
+
+.botoes span button {
+    color: red;
+}
